@@ -1,0 +1,334 @@
+body {
+    font-size: 14px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    background-color: #f5f5f5;
+    min-height: 100vh;
+    padding-bottom: 80px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.emoticons {
+  display: none;
+}
+
+/* Custom scroll */
+.customScroll::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: #F5F5F5;
+}
+
+.customScroll::-webkit-scrollbar
+{
+  width: 5px;
+  background-color: #F5F5F5;
+}
+
+.customScroll::-webkit-scrollbar-thumb
+{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  background-color: #555;
+}
+
+/* Uplodad Field */
+.upload-btn {
+  color: #ffffff;
+  background-color: #F89406;
+  border: none;
+}
+
+.upload-btn:hover,
+.upload-btn:focus,
+.upload-btn:active,
+.upload-btn.active {
+  color: #ffffff;
+  background-color: #FA8900;
+  border: none;
+}
+
+#upload-input {
+  display: none;
+}
+
+.progress {
+  position: absolute;
+  width: 125px;
+  right: 15px;
+  margin-top: 15px;
+  display: none;
+}
+
+/* Chatbox */
+.messages {
+    height: calc(100vh - 150px);
+    min-height: 250px;
+    margin-top: 15px!important;
+}
+
+.messages:after,.messages:before {
+    content: '';
+    display: table
+}
+
+.messages:after {
+  clear: both
+}
+
+.messages__lists,.messages__view {
+  float: left;
+  clear: none;
+  margin-left: 0;
+  background-color: #fff;
+  height: 100%
+}
+
+.messages__lists {
+  width: 32%;
+}
+
+.messages__lists:last-child,.messages__view:last-child {
+  margin-right: 0
+}
+
+.messages__view {
+  width: 68%;
+  margin-right: 0
+}
+
+.messages__view:after {
+  clear: both
+}
+
+.messages__lists--headline {
+  color: #fff;
+  font-size: 1.1em;
+  line-height: 1.5em;
+  font-weight: 700;
+  border-bottom: 1px solid #bfbfbf;
+  margin: 0;
+  padding: 10px;
+  text-transform: uppercase;
+  background-color: #d1b53a;
+}
+
+.messages__lists .conversation-list {
+  padding: 0;
+  height: calc(100% - 44px);
+  overflow-y: scroll;
+}
+
+.messages__lists .conversation-list li.current {
+      background-color: #d9edf7;
+}
+
+.messages__lists .inbox {
+  list-style: none;
+  border-bottom: 1px solid #ededed;
+  padding: 10px;
+  width: 100%;
+}
+
+.messages__lists .inbox:last-child {
+  border: 0
+}
+
+.messages__lists .inbox a {
+  display: block;
+  text-transform: uppercase;
+}
+
+.messages__lists .inbox__meta-img {
+  display: inline-block;
+  margin-right: 5px;
+  position: relative;
+  vertical-align: top;
+  width: 50px
+}
+
+.messages__lists .inbox__meta-img--product_img {
+  height: 50px
+}
+
+.messages__lists .inbox__meta-img--product_img img {
+  max-height: 100%;
+  max-width: 100%
+}
+
+.messages__lists .inbox__meta-img--avatar {
+  border: 1px solid #fff;
+  bottom: -5px;
+  position: absolute;
+  right: -5px
+}
+
+.messages__view .message.me .message__box:before,.messages__view .message__box:before {
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  position: absolute
+}
+
+.messages__lists .inbox__summary {
+  display: inline-block;
+  margin-top: 5px;
+  vertical-align: middle;
+  width: calc(100% - 59px)
+}
+
+.messages__lists .inbox__summary--product_title {
+  display: inline-block;
+  margin: 0;
+  width: 135px
+}
+
+.messages__view:after,.messages__view:before {
+  display: table;
+  content: ''
+}
+
+.messages__lists .inbox__summary--send_time {
+  float: right;
+  font-size: .8em;
+  margin: -2px 0 0;
+  vertical-align: top
+}
+
+.messages__lists .inbox__summary--message {
+  width: 150px;
+  margin: 0
+}
+
+.messages__lists .inbox.selected {
+  background-color: #d5f1ff
+}
+
+.messages__wrapper {
+  height: 100%
+}
+
+.messages__view {
+  position: relative
+}
+
+.messages__view .messages__view-list {
+  height: calc(100% - 154px);
+  overflow-y: scroll;
+  padding: 20px 20px 0;
+  list-style: none;
+}
+
+/*.messages:hover .messages__view-list {
+  overflow-y: scroll;
+}*/
+
+.messages__view .message {
+  margin-bottom: 20px
+}
+
+.messages__view .message__avatar {
+  float: left;
+  width: 40px
+}
+
+.messages__view .message__box {
+  background-color: #ededed;
+  border-radius: 5px;
+  margin-left: 60px;
+  padding: 10px;
+  position: relative
+}
+
+.messages__view .message__box:before {
+  border-right: 10px solid #ededed;
+  content: '';
+  height: 0;
+  left: -10px;
+  width: 0
+}
+
+.messages__view .message__box--message {
+  margin: 0
+}
+
+.messages__view .message__box--time {
+  font-size: .7em;
+  margin: 5px 0 0
+}
+
+.messages__view .message.me .message__avatar {
+  float: right
+}
+
+.messages__view .message.me .message__box {
+  background-color: #57A74B;
+  color: #fff;
+  margin-left: 0;
+  margin-right: 60px
+}
+
+.profile__info,.profile__info:last-child {
+  margin-right: 0
+}
+
+.messages__view .message.me .message__box:before {
+  border-right: 0 solid #fff;
+  border-left: 10px solid #57A74B;
+  right: -10px;
+  left: auto
+}
+
+.messages__view .message.me .message__box .message__box--message,.messages__view .message.me .message__box .message__box--time {
+  color: #fff
+}
+
+.messages__view--form {
+  border-top: 1px solid #bfbfbf;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 110px
+}
+
+.messages__view--form .category-filters,.messages__view--form form {
+  height: 100%;
+  position: relative
+}
+
+.messages__view--form textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  padding: 10px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  outline: 0;
+  -webkit-tap-highlight-color: transparent;
+  border: 0;
+  height: 100%;
+  padding: 10px;
+  resize: none;
+}
+
+.messages__view--form .message-btn {
+  z-index: 99;
+  bottom: 20px;
+  position: absolute;
+  right: 20px
+}
+
+.messages+.footer {
+  position: absolute;
+  bottom: -30px;
+  width: 100%
+}
+
+#conversationWrapper.loading {
+height: 100px;
+background: url(../img/spinner.gif) bottom center no-repeat;
+background-size: 32px 32px;
+}
